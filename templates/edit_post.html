@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}{{post.title}}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    
+  <div class="col-md-6">
+
+    <div>
+      <p class="display-6">Edit Feedback</p>
+      <form action="/feedback/{{post.id}}/edit" method="POST">
+
+        {% include '_feedback_form.html' %}
+          
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block page_scripts %}{% endblock %}
